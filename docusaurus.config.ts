@@ -44,7 +44,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           routeBasePath: 'docs',
           editUrl:
-            'https://github.com/courseforge/documentaiton_for_courseforge/tree/main/',
+            'https://github.com/rajeshpachaikani/documentation_for_courseforge/tree/main/',
         },
         blog: false,
         theme: {
@@ -73,7 +73,7 @@ const config: Config = {
           label: 'Guide',
         },
         {
-          href: 'https://github.com/courseforge/documentaiton_for_courseforge',
+          href: 'https://github.com/rajeshpachaikani/documentation_for_courseforge',
           label: 'GitHub',
           position: 'right',
         },
@@ -104,7 +104,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/courseforge/documentaiton_for_courseforge',
+              href: 'https://github.com/rajeshpachaikani/documentation_for_courseforge',
             },
           ],
         },
