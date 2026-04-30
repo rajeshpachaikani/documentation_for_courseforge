@@ -1,0 +1,8 @@
+{
+  "label": "Advanced",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Custom builds, multi-tenant deployments, and architecture notes."
+  }
+}

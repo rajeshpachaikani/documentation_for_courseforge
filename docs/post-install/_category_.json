@@ -1,0 +1,8 @@
+{
+  "label": "Post-Install Setup",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Hand the running deployment over to the client: first admin, credentials, theming, first course."
+  }
+}
