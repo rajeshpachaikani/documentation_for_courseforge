@@ -54,7 +54,7 @@ A student registered before you opened the URL. Reset:
 
 ```bash
 docker compose down
-docker volume rm courseforge_pgdata
+docker volume rm coursemaker_pgdata
 docker compose up -d --build
 ```
 

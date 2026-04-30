@@ -16,7 +16,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Two containers, one volume. <code>docker compose up -d --build</code> on
-        a 2 GB VPS and CourseForge is live in under ten minutes.
+        a 2 GB VPS and CourseMaker is live in under ten minutes.
       </>
     ),
   },

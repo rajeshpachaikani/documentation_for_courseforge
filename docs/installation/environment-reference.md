@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Environment Reference
 
-CourseForge keeps the `.env` file deliberately small. Only
+CourseMaker keeps the `.env` file deliberately small. Only
 infrastructure-level secrets live here — everything tenant-specific
 (Stripe keys, Bunny keys, SMTP credentials, OAuth client IDs) is
 stored encrypted in the database and configured from the admin UI.
@@ -23,8 +23,8 @@ stored encrypted in the database and configured from the admin UI.
 
 | Variable          | Default        | Notes |
 | ----------------- | -------------- | ----- |
-| `POSTGRES_USER`   | `courseforge`  | DB role. Rarely changed. |
-| `POSTGRES_DB`     | `courseforge`  | DB name. Rarely changed. |
+| `POSTGRES_USER`   | `coursemaker`  | DB role. Rarely changed. |
+| `POSTGRES_DB`     | `coursemaker`  | DB name. Rarely changed. |
 | `APP_HOST_PORT`   | `4210`         | Port on `127.0.0.1` the app container binds to. Your reverse proxy points here. |
 | `SKIP_MIGRATIONS` | unset          | Set to `1` on the `app` service to skip migrations on startup (rollback / debugging). |
 

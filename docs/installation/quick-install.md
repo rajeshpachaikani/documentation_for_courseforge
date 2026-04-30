@@ -22,27 +22,27 @@ docker --version
 docker compose version
 ```
 
-## 2. Get the CourseForge source
+## 2. Get the CourseMaker source
 
-CourseForge is shipped as a source repository — `docker compose up
+CourseMaker is shipped as a source repository — `docker compose up
 --build` builds the image locally. Clone it onto the server:
 
 ```bash
-sudo mkdir -p /opt/courseforge
-sudo chown "$USER":"$USER" /opt/courseforge
-cd /opt/courseforge
-git clone https://github.com/<your-org>/courseforge.git .
+sudo mkdir -p /opt/coursemaker
+sudo chown "$USER":"$USER" /opt/coursemaker
+cd /opt/coursemaker
+git clone https://github.com/<your-org>/coursemaker.git .
 ```
 
 :::tip
 Replace `<your-org>` with the repository URL your vendor gave you.
-If you received a tarball instead, `tar xzf courseforge.tar.gz -C
-/opt/courseforge --strip-components=1`.
+If you received a tarball instead, `tar xzf coursemaker.tar.gz -C
+/opt/coursemaker --strip-components=1`.
 :::
 
 ## 3. Generate secrets
 
-CourseForge needs two random 32-byte secrets:
+CourseMaker needs two random 32-byte secrets:
 
 ```bash
 echo "BETTER_AUTH_SECRET=$(openssl rand -base64 32)"
@@ -73,9 +73,9 @@ BETTER_AUTH_URL=https://learn.client.com
 BETTER_AUTH_SECRET=<paste the value you generated>
 ENCRYPTION_KEY=<paste the value you generated>
 
-POSTGRES_USER=courseforge
+POSTGRES_USER=coursemaker
 POSTGRES_PASSWORD=<choose a strong password>
-POSTGRES_DB=courseforge
+POSTGRES_DB=coursemaker
 
 APP_HOST_PORT=4210
 ```
@@ -135,7 +135,7 @@ curl -I https://learn.client.com
 ```
 
 Expected: `HTTP/2 200`. Open the URL in a browser — you should see
-the CourseForge landing page with a **Sign Up** button.
+the CourseMaker landing page with a **Sign Up** button.
 
 ## Next
 

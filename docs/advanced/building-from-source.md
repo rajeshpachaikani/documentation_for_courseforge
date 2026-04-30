@@ -10,16 +10,16 @@ pulled from a registry. This page covers the variants.
 
 ## CI-built image (recommended for fleets)
 
-If you operate more than a handful of CourseForge deployments,
+If you operate more than a handful of CourseMaker deployments,
 build once in CI and push to a private registry:
 
 ```bash
-docker build -t registry.example.com/courseforge:v1.4.0 .
-docker push registry.example.com/courseforge:v1.4.0
+docker build -t registry.example.com/coursemaker:v1.4.0 .
+docker push registry.example.com/coursemaker:v1.4.0
 ```
 
 Then on each server, replace the `build:` block in
-`docker-compose.yml` with `image: registry.example.com/courseforge:v1.4.0`.
+`docker-compose.yml` with `image: registry.example.com/coursemaker:v1.4.0`.
 Upgrades become `docker compose pull && docker compose up -d`.
 
 ## Architecture-specific notes

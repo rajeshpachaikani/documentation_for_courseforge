@@ -39,8 +39,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title="CourseForge Documentation"
-      description="Installation and operations guide for CourseForge — the self-hosted, white-label course platform.">
+      title="CourseMaker Documentation"
+      description="Installation and operations guide for CourseMaker — the self-hosted, white-label course platform.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

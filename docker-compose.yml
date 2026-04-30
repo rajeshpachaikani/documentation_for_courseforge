@@ -1,11 +1,11 @@
-name: courseforge-docs
+name: coursemaker-docs
 
 services:
   docs:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: courseforge-docs
+    container_name: coursemaker-docs
     restart: unless-stopped
     ports:
       - "127.0.0.1:${DOCS_HOST_PORT:-4220}:80"

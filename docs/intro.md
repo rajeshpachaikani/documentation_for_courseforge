@@ -1,18 +1,18 @@
 ---
 sidebar_position: 1
 slug: /
-title: CourseForge for System Administrators
+title: CourseMaker for System Administrators
 ---
 
-# CourseForge for System Administrators
+# CourseMaker for System Administrators
 
-CourseForge is a self-hostable, white-label course selling platform. Each
+CourseMaker is a self-hostable, white-label course selling platform. Each
 client gets their own Docker-deployed instance with their own Stripe,
 Bunny Stream, and SMTP credentials, and full control over storefront
 appearance.
 
 This guide is written for the **System Administrator** who installs
-CourseForge on a server and hands the running URL over to the client.
+CourseMaker on a server and hands the running URL over to the client.
 Client-side configuration (catalog, theming, payment keys) happens
 through the admin UI after the install — those steps are covered in
 [Post-Install Setup](./post-install/first-admin-account.md).

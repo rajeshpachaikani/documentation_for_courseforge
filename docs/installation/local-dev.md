@@ -6,7 +6,7 @@ sidebar_position: 5
 
 Most sysadmins do not need this section — the production install
 above does not require running the codebase locally. Use this guide
-only if you intend to fork CourseForge or test changes before
+only if you intend to fork CourseMaker or test changes before
 deploying.
 
 ## Prerequisites
@@ -17,8 +17,8 @@ deploying.
 ## Steps
 
 ```bash
-git clone https://github.com/<your-org>/courseforge.git
-cd courseforge
+git clone https://github.com/<your-org>/coursemaker.git
+cd coursemaker
 cp .env.example .env.local
 ```
 

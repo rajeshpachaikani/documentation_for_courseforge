@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # First Admin Account
 
-CourseForge has no built-in default admin. The **first account
+CourseMaker has no built-in default admin. The **first account
 registered through the public sign-up form is automatically promoted
 to admin**. Every subsequent registration is a regular student.
 
@@ -26,7 +26,7 @@ the database to recover.
 ## Verifying admin status
 
 ```bash
-docker compose exec postgres psql -U courseforge -d courseforge \
+docker compose exec postgres psql -U coursemaker -d coursemaker \
   -c "SELECT id, email, role FROM \"user\" ORDER BY \"createdAt\";"
 ```
 
@@ -38,7 +38,7 @@ If the client wants a second admin (a co-founder, an assistant), do
 it from the database — there is no UI yet:
 
 ```bash
-docker compose exec postgres psql -U courseforge -d courseforge \
+docker compose exec postgres psql -U coursemaker -d coursemaker \
   -c "UPDATE \"user\" SET role = 'admin' WHERE email = 'second@client.com';"
 ```
 
@@ -49,7 +49,7 @@ see the `/admin` link on next page load.
 
 ```bash
 docker compose down
-docker volume rm courseforge_pgdata
+docker volume rm coursemaker_pgdata
 docker compose up -d --build
 ```
 

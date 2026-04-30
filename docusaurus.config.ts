@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'CourseForge Docs',
+  title: 'CourseMaker Docs',
   tagline: 'Self-hosted, white-label course platform — sysadmin guide',
   favicon: 'img/favicon.ico',
 
@@ -11,7 +11,7 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://docs.courseforge.example.com',
+  url: 'https://docs.coursemaker.example.com',
   baseUrl: '/',
 
   stylesheets: [
@@ -21,8 +21,8 @@ const config: Config = {
     },
   ],
 
-  organizationName: 'courseforge',
-  projectName: 'documentaiton_for_courseforge',
+  organizationName: 'coursemaker',
+  projectName: 'documentation_for_coursemaker',
 
   onBrokenLinks: 'warn',
   markdown: {
@@ -44,7 +44,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           routeBasePath: 'docs',
           editUrl:
-            'https://github.com/rajeshpachaikani/documentation_for_courseforge/tree/main/',
+            'https://github.com/rajeshpachaikani/documentation_for_coursemaker/tree/main/',
         },
         blog: false,
         theme: {
@@ -60,9 +60,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'CourseForge Docs',
+      title: 'CourseMaker Docs',
       logo: {
-        alt: 'CourseForge Logo',
+        alt: 'CourseMaker Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -73,7 +73,7 @@ const config: Config = {
           label: 'Guide',
         },
         {
-          href: 'https://github.com/rajeshpachaikani/documentation_for_courseforge',
+          href: 'https://github.com/rajeshpachaikani/documentation_for_coursemaker',
           label: 'GitHub',
           position: 'right',
         },
@@ -104,12 +104,12 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/rajeshpachaikani/documentation_for_courseforge',
+              href: 'https://github.com/rajeshpachaikani/documentation_for_coursemaker',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} CourseForge. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} CourseMaker. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Backups and Restore
 
-CourseForge holds two pieces of state on the server:
+CourseMaker holds two pieces of state on the server:
 
 1. The **Postgres volume** (`pgdata`) — users, courses, page-builder
    JSON, theme, encrypted credentials.
@@ -22,9 +22,9 @@ their durability separately.
 Cron (root crontab):
 
 ```bash
-0 3 * * * docker compose -f /opt/courseforge/docker-compose.yml \
-  exec -T postgres pg_dump -U courseforge -d courseforge \
-  | gzip > /var/backups/courseforge/$(date +\%Y\%m\%d).sql.gz
+0 3 * * * docker compose -f /opt/coursemaker/docker-compose.yml \
+  exec -T postgres pg_dump -U coursemaker -d coursemaker \
+  | gzip > /var/backups/coursemaker/$(date +\%Y\%m\%d).sql.gz
 ```
 
 Retain 30 days, ship offsite (S3, B2, Borg, restic — your call).
@@ -49,8 +49,8 @@ restore is not a backup.
 On a fresh host:
 
 ```bash
-git clone https://github.com/<your-org>/courseforge.git /opt/courseforge
-cd /opt/courseforge
+git clone https://github.com/<your-org>/coursemaker.git /opt/coursemaker
+cd /opt/coursemaker
 cp .env.example .env
 # Paste the ORIGINAL ENCRYPTION_KEY into .env. Generate the
 # others fresh.
@@ -58,7 +58,7 @@ docker compose up -d --build
 docker compose stop app
 
 zcat /path/to/backup.sql.gz | docker compose exec -T postgres \
-  psql -U courseforge -d courseforge
+  psql -U coursemaker -d coursemaker
 
 docker compose start app
 ```

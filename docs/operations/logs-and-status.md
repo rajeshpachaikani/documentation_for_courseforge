@@ -16,8 +16,8 @@ docker compose logs --since 30m app     # last 30 minutes
 Both `app` and `postgres` ship Docker healthchecks:
 
 ```bash
-docker inspect --format='{{.State.Health.Status}}' courseforge-app
-docker inspect --format='{{.State.Health.Status}}' courseforge-postgres
+docker inspect --format='{{.State.Health.Status}}' coursemaker-app
+docker inspect --format='{{.State.Health.Status}}' coursemaker-postgres
 ```
 
 `healthy` means the app responds to `GET /` with HTTP 200 and
@@ -45,6 +45,6 @@ image.)
 
 ```bash
 docker system df
-docker compose exec postgres psql -U courseforge -d courseforge \
-  -c "SELECT pg_size_pretty(pg_database_size('courseforge'));"
+docker compose exec postgres psql -U coursemaker -d coursemaker \
+  -c "SELECT pg_size_pretty(pg_database_size('coursemaker'));"
 ```

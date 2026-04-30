@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Reverse Proxy Recipes
 
-The CourseForge app container binds to `127.0.0.1:${APP_HOST_PORT}`
+The CourseMaker app container binds to `127.0.0.1:${APP_HOST_PORT}`
 (default `4210`). It speaks plain HTTP. **You must put a TLS
 terminator in front of it.** Three working recipes below.
 
@@ -36,7 +36,7 @@ sudo systemctl reload caddy
 
 ## Nginx + Certbot
 
-`/etc/nginx/sites-available/courseforge`:
+`/etc/nginx/sites-available/coursemaker`:
 
 ```nginx
 server {
@@ -70,7 +70,7 @@ server {
 ```
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/courseforge /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/coursemaker /etc/nginx/sites-enabled/
 sudo certbot --nginx -d learn.client.com
 sudo systemctl reload nginx
 ```
@@ -82,14 +82,14 @@ If the server has no public IP (NATted home lab, hardened VPS), run
 port. No inbound 80/443 needed.
 
 ```bash
-cloudflared tunnel route dns courseforge learn.client.com
+cloudflared tunnel route dns coursemaker learn.client.com
 ```
 
 `/etc/cloudflared/config.yml`:
 
 ```yaml
-tunnel: courseforge
-credentials-file: /etc/cloudflared/courseforge.json
+tunnel: coursemaker
+credentials-file: /etc/cloudflared/coursemaker.json
 
 ingress:
   - hostname: learn.client.com

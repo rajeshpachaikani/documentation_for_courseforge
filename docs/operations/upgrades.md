@@ -4,13 +4,13 @@ sidebar_position: 3
 
 # Upgrades
 
-CourseForge ships breaking changes infrequently but they do happen.
+CourseMaker ships breaking changes infrequently but they do happen.
 Always read the release notes before pulling.
 
 ## Standard upgrade
 
 ```bash
-cd /opt/courseforge
+cd /opt/coursemaker
 git fetch --tags
 git checkout v<new-version>
 
@@ -56,7 +56,7 @@ The compose file pins `postgres:17-alpine`. To go to 18:
 1. `pg_dump` the current DB (see
    [Backups](./backup-restore.md)).
 2. `docker compose down`.
-3. `docker volume rm courseforge_pgdata`.
+3. `docker volume rm coursemaker_pgdata`.
 4. Edit `docker-compose.yml`, change `postgres:17-alpine` →
    `postgres:18-alpine`.
 5. `docker compose up -d postgres`, restore the dump, then start

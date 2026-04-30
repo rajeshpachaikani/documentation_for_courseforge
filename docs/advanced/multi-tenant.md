@@ -4,20 +4,20 @@ sidebar_position: 3
 
 # One Server, Multiple Clients
 
-CourseForge is **not** multi-tenant — every client gets their own
+CourseMaker is **not** multi-tenant — every client gets their own
 fully isolated instance. That's a deliberate product decision: each
 client owns their Stripe account, their Bunny library, their data.
 
-If you operate CourseForge as a hosting provider for several
+If you operate CourseMaker as a hosting provider for several
 clients on the same physical machine, run **one stack per client**:
 
 ```
-/opt/courseforge/client-acme/
+/opt/coursemaker/client-acme/
   docker-compose.yml
   .env                   # NEXT_PUBLIC_APP_URL=https://learn.acme.com
                          # APP_HOST_PORT=4210
 
-/opt/courseforge/client-beta/
+/opt/coursemaker/client-beta/
   docker-compose.yml
   .env                   # NEXT_PUBLIC_APP_URL=https://learn.beta.com
                          # APP_HOST_PORT=4211
@@ -27,7 +27,7 @@ Each compose project gets a unique `name:` (top of the compose file)
 so volumes and networks don't collide:
 
 ```yaml
-name: courseforge-acme
+name: coursemaker-acme
 ```
 
 Reverse proxy each public hostname to its own `APP_HOST_PORT`.
@@ -47,6 +47,6 @@ neighbours.
 
 ## Backups across multiple stacks
 
-Loop over each `/opt/courseforge/client-*` directory in the cron job
+Loop over each `/opt/coursemaker/client-*` directory in the cron job
 and dump each Postgres separately. **Each stack has its own
 `ENCRYPTION_KEY`** — back up keys per-client.

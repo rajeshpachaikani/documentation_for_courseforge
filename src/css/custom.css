@@ -18,9 +18,9 @@
 }
 
 /* ─────────────────────────────────────────────────────────────
- * Dark mode — matches the CourseForge web app
+ * Dark mode — matches the CourseMaker web app
  * (ConsultusNow brand: deep purple-black + hot pink gradient)
- * Tokens mirror app/globals.css in the courseforge repo.
+ * Tokens mirror app/globals.css in the coursemaker repo.
  * ─────────────────────────────────────────────────────────────*/
 [data-theme='dark'] {
   /* Brand tokens (same OKLCH values as the app) */
